@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Fetcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="left-panel">
+                <h1>Bienvenue à Article Fetcher</h1>
+                <p>Saisissez l'URL de l'article que vous souhaitez récupérer et lisez-le instantanément.</p>
+            </div>
+            <div class="right-panel">
+                <form id="fetch-form" aria-label="Formulaire de récupération d'article">
+                    <label for="url">Article URL:</label>
+                    <input type="text" id="url" name="url" placeholder="Entrez l'URL de l'article" aria-required="true">
+                    <button type="submit">Fetch Article</button>
+                </form>
+                <div id="article-content" class="article-content" aria-live="polite"></div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
